@@ -13,7 +13,7 @@
   & .highlight { @apply bg-yellow-200; }
 
   & .subdoc {
-	@apply text-sm text-teal-700 pr-3 cursor-pointer;
+	@apply text-sm text-teal-700 pr-3;
   }
 }
 
