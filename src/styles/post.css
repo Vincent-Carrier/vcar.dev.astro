@@ -1,6 +1,6 @@
 .post {
-  & h1 { @apply text-3xl text-teal-800 font-display; }
-  & h2 { @apply text-2xl text-teal-800 mt-8 font-display; }
+  & h1 { @apply text-3xl text-teal-800 font-display leading-tight; }
+  & h2 { @apply text-2xl text-teal-800 mt-8 font-display leading-tight; }
   & p, li { @apply text-teal-700 font-serif text-lg leading-relaxed; }
   & a { @apply hover:text-rose-700 hover:decoration-rose-700 underline underline-offset-2 decoration-teal-700/30; }
   & ul { @apply list-disc pl-4 ml-4; }

@@ -17,7 +17,7 @@ const { Content } = await post.render();
 
 <BlogPost {...post.data}>
 	<div class="mb-6">
-		<h1>{post.data.title}</h1>
+		<h1 set:html={post.data.title} />
 	</div>
 	<Content />
 </BlogPost>

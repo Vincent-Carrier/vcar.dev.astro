@@ -5,7 +5,7 @@ import Base from '@/layouts/Base.astro'
 import { getCollection } from 'astro:content'
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 )
 ---
 
@@ -18,9 +18,7 @@ const posts = (await getCollection('blog')).sort(
             <a href={`/blog/${post.slug}`}}>
               <article class="max-w-xl mx-auto py-6 px-12 text-center">
 								<FormattedDate date={post.data.pubDate} class="font-serif text-teal-700/70" />
-                <header class="font-display text-2xl text-teal-800">
-                  {post.data.title}
-                </header>
+                <header class="font-display text-2xl text-teal-800 leading-tight mb-2" set:html={post.data.title} />
                 <p class="font-serif text-teal-700 text-lg" set:html={post.data.description} />
               </article>
             </a>

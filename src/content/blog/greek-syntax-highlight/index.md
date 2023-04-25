@@ -1,7 +1,7 @@
 ---
-title: 'A New Reading Experience for Ancient Greek'
+title: 'A New Reading Experience for Ancient&nbsp;Greek'
 description: 'In which I apply programming language ergonomics to&nbsp;a&nbsp;dead&nbsp;tongue'
-pubDate: '2023-03-22'
+pubDate: '2023-4-25'
 ---
 
 If you’re like me and you’re learning Ancient Greek, you’ve probably had an experience like this: 
