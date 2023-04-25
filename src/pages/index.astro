@@ -1,19 +1,19 @@
 ---
-import greeks from '@/assets/greek_heroes.png'
-import Base from '@/layouts/Base.astro'
-import RightArrow from '@/partials/rarrow.astro'
-import Socials from '@/partials/socials.astro'
-import Swash from '@/partials/swash.astro'
-import { Image } from 'astro:assets'
+import Base from '@/layouts/Base.astro';
+import RightArrow from '@/partials/rarrow.astro';
+import Socials from '@/partials/socials.astro';
+import Swash from '@/partials/swash.astro';
 ---
 
 <Base title="Vincent Carrier" description="Web Developer, Hellenophile">
   <main class="font-display overflow-x-clip">
-    <Image
-      src={greeks.src}
-	  width={greeks.width}
-	  height={greeks.height}
-	  quality="mid"
+    <img
+      src="/greek_heroes@0.5x.webp"
+	  srcset="/greek_heroes.webp@0.5x, /greek_heroes.webp 2x"
+	  width="2979"
+	  height="1498"
+	  loading="lazy"
+	  decoding="async"
       alt="greek heroes"
       class="relative max-w-4xl mx-auto h-96 object-cover transform max-md:-translate-x-32"
     />
