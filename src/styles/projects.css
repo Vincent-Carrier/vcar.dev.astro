@@ -1,0 +1,4 @@
+.parchment {
+  filter: url(#wavy2);
+  box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+}

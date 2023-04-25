@@ -1,0 +1,16 @@
+.post {
+  & h1 { @apply text-3xl text-teal-800 mb-2 font-display; }
+  & h2 { @apply text-xl text-teal-800 mt-8 font-display; }
+  & p { @apply text-teal-800 font-serif text-lg leading-relaxed; }
+  & :is(h2, p) code {
+    @apply text-sm bg-teal-50/40 px-1 py-px rounded-md border border-teal-600/20;
+  }
+
+  & pre[class*="language-"] {
+    @apply bg-teal-50/40 px-4 py-2 text-sm rounded-md border border-teal-600/20 min-w-[60ch] overflow-scroll;
+  }
+  & > pre[class*="language-"] { @apply items-center !mx-16 max-sm:!mx-0; }
+
+  & > hr { @apply my-8 mx-4 border-teal-700/20; }
+  & > blockquote { @apply text-teal-800 font-serif text-sm mx-4 leading-relaxed; }
+}

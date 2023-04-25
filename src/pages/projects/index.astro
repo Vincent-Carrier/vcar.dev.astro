@@ -1,0 +1,64 @@
+---
+import Box from '@/components/box.astro';
+import Base from '@/layouts/Base.astro';
+
+const projects = [
+  {
+    name: 'molsoft.io',
+    description: 'Marketing website for the Molsoft eCommerce agency',
+    technologies: 'React, NextJS, TypeScript, Tailwind',
+    url: 'https://www.molsoft.io/',
+  },
+  {
+    name: 'Endossed',
+    description: 'Web app for Endossed, a FinTech startup',
+    technologies: 'React, TypeScript, Tailwind',
+    url: 'https://my.endossed.com/',
+  },
+  {
+    name: 'ThirdWheel',
+    description: 'A dating app with a twist: others match you',
+    technologies: 'React, SASS, PostgreSQL, Node.js',
+    url: 'https://github.com/Vincent-Carrier/thirdwheel',
+  },
+  {
+    name: 'Greek Learns You',
+    description: "Learn Greek words you didn't know you already knew",
+    technologies: 'Svelte, Tailwind',
+    url: 'https://github.com/Vincent-Carrier/greeklearnsyou',
+  },
+]
+---
+
+<Base title="Projects" description="Vincent's portfolio of web projects">
+  <main class="mt-16 mb-32 max-w-xl mx-auto">
+    <ul class="flex flex-col gap-y-16">
+      {
+        projects.map((project) => (
+          <Box>
+            <a href={project.url} target="_blank">
+              <article class="max-w-xl mx-auto pb-6 pt-3 px-12 text-center">
+                <header class="font-display text-2xl text-teal-800 mb-2">
+                  {project.name}
+                </header>
+                <p class="font-serif text-teal-700 text-lg">
+                  {project.description}
+                </p>
+                <p class="font-serif text-teal-700/70">
+                  {project.technologies}
+                </p>
+              </article>
+            </a>
+          </Box>
+        ))
+      }
+    </ul>
+  </main>
+  <svg>
+    <filter id="wavy2">
+      <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"
+      ></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="20"></feDisplacementMap>
+    </filter>
+  </svg>
+</Base>

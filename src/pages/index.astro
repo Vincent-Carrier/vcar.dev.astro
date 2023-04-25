@@ -1,15 +1,75 @@
 ---
+import greeks from '@/assets/greek_heroes.png'
+import Base from '@/layouts/Base.astro'
+import RightArrow from '@/partials/rarrow.astro'
+import Socials from '@/partials/socials.astro'
+import Swash from '@/partials/swash.astro'
+import { Image } from 'astro:assets'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Vincent Carrier" description="Web Developer, Hellenophile">
+  <main class="font-display overflow-x-clip">
+    <Image
+      src={greeks}
+      alt="greek heroes"
+      class="relative max-w-4xl mx-auto h-96 object-cover transform max-sm:-translate-x-64 max-md:-translate-x-32"
+    />
+    <article class="max-w-xl mx-auto mt-20 px-4 transform md:-translate-x-14">
+      <h1 class="text-3xl text-teal-700 w-min whitespace-nowrap relative">
+        I&apos;m Vincent
+        <div class="absolute w-28 -right-36 top-2">
+          <div class="relative w-28 h-4">
+            <div
+              aria-hidden
+              class="absolute left-36 -top-4 font-sans text-sm text-teal-700/60"
+            >
+              <strong>prop. n.</strong>&nbsp;&nbsp; A male given name
+              <br /> &lt; <em>Lat.</em> Vincentius &lt; vincēns&nbsp;
+              <em>(conquering)</em>
+              &nbsp;&lt; vincō <em>(I conquer)</em>
+              <br />
+              &lt; <em>P.-It.</em> *winkō &lt; <em>PIE</em> *weyk-&nbsp;
+              <em>(to separate)</em>
+              <br /> &gt;&nbsp;<em>P.-Germ.</em> *wīhaz <em>(sacred)</em>
+              &nbsp;&gt;&nbsp;
+              <em>O.-Eng.</em> *wēoh &gt;&nbsp;
+              <em>Eng.&nbsp;</em>
+              <a
+                href="https://youtube.com/watch?v=rf71YotfykQ&t=163"
+                target="_blank"
+                rel="noreferrer"
+              >
+                witch
+              </a>
+            </div>
+          </div>
+          <RightArrow />
+        </div>
+      </h1>
+      <p class="text-xl text-teal-700/90">
+        I&nbsp;
+        <a href="/projects" class="hover:text-rose-800"> make websites</a>
+        &nbsp;for a living
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but in my free time I enjoy
+        <br />
+        obsessing about typefaces no one sees
+        <br />
+        &nbsp;&nbsp;&nbsp;decoding dead languages no one speaks
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and arguing about old books no one reads
+      </p>
+    </article>
+    <footer class="max-w-lg mx-auto mt-24 mb-16">
+      <p class="mb-8 text-center text-lg font-serif italic text-teal-700/60">
+        τὸ πνεῦμα ὅπου θέλει πνεῖ καὶ τὴν φωνὴν αὐτοῦ ἀκούεις
+        <br />
+        ἀλλ’οὐκ οἶδας πόθεν ἔρχεται καὶ ποῦ ὑπάγει
+      </p>
+      <div class="mt-12 mb-6 w-36 mx-auto">
+        <Swash />
+      </div>
+      <Socials />
+    </footer>
+  </main>
+</Base>

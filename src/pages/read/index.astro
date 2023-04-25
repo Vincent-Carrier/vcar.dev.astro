@@ -1,0 +1,46 @@
+---
+import Box from '@/components/Box.astro';
+import Base from '@/layouts/Base.astro';
+import works from './_nav';
+---
+
+<Base title="Blog" description="Vincent's thoughts and vagaries">
+  <main class="mt-16 max-w-xl mx-auto">
+    <p class="text-teal-700 text-lg font-serif mb-16">
+      This is a collection of syntax-highlighted Ancient Greek texts. You can
+      hover a word to see its dependencies, and click on a word to see its
+      morphological analysis. The texts are from the Perseus Digital Library.
+    </p>
+    <ul class="flex flex-col gap-y-16 mb-32">
+      {
+        Object.entries(works).map(([id, chunks]) => {
+          const tb = chunks[0]
+
+          return (
+            <Box>
+              <a href={`/read/${tb.slug}`}>
+                <article class="max-w-xl mx-auto py-6 px-12 text-center">
+                  <header class="font-display text-2xl text-teal-800">
+                    {tb.data.title}
+                  </header>
+                  <p class="font-serif text-teal-700 text-lg">
+                    by {tb.data.author}
+                  </p>
+                  <ol class="flex flex-wrap justify-center mx-auto px-8 gap-x-2 font-serif">
+                    {chunks.map((chunk) => (
+                      <li>
+                        <a class="text-teal-700/80 hover:text-rose-700" href={`/read/${chunk.slug}`}>
+                          {chunk.data.chunkId}
+                        </a>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              </a>
+            </Box>
+          )
+        })
+      }
+    </ul>
+  </main>
+</Base>

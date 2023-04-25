@@ -1,0 +1,23 @@
+---
+import cx from 'clsx';
+const path = Astro.url.pathname
+---
+  
+<nav class="font-display text-2xl text-teal-800 py-4 mt-8">
+  <ul class="flex gap-x-8 justify-center">
+    {[
+      { href: '/', label: 'About' },
+      { href: '/projects', label: 'Projects' },
+      { href: '/blog', label: 'Blog' },
+      { href: '/read', label: 'Reader' },
+    ].map((page) => (
+      <li
+        class={cx('hover:text-rose-800', {
+          'underline underline-offset-8': page.href == path,
+        })}
+      >
+        <a href={page.href}>{page.label}</a>
+      </li>
+    ))}
+  </ul>
+</nav>

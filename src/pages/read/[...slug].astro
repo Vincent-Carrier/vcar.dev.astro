@@ -1,0 +1,38 @@
+---
+import 'tippy.js/dist/tippy.css'
+
+import Treebank from '@/layouts/Treebank.astro'
+import ShortArrow from '@/partials/ShortArrow.astro'
+import { CollectionEntry,getCollection,getEntryBySlug } from 'astro:content'
+
+export async function getStaticPaths() {
+  const treebanks = await getCollection('treebank')
+  return treebanks.map((tb) => ({
+    params: { slug: tb.slug },
+    props: tb,
+  }))
+}
+type Props = CollectionEntry<'treebank'>
+
+const tb = Astro.props
+const { Content } = await tb.render()
+
+const prev = await getEntryBySlug('treebank', tb.slug.replace(/\d+$/, (n) => (parseInt(n) - 1).toString()))
+const next = await getEntryBySlug('treebank', tb.slug.replace(/\d+$/, (n) => (parseInt(n) + 1).toString()))
+---
+
+<script src="@/scripts/reader/highlight.ts"></script>
+<script src="@/scripts/reader/word-lookup.ts"></script>
+<script src="@/scripts/reader/cts-tr.ts"></script>
+
+<Treebank {...tb.data}>
+  <header slot="header">
+    <h1 class="text-3xl text-teal-800 font-display">{tb.data.title}</h1>
+    <p class="text-xl font-display text-teal-700 mb-2">by {tb.data.author}</p>
+  </header>
+  <Content />
+  <nav class="flex justify-center">
+	{prev && <a href={`./${tb.data.chunkId - 1}`}><ShortArrow class="rotate-90 -translate-x-32 text-teal-700" /></a>}
+	{next && <a href={`./${tb.data.chunkId + 1}`}><ShortArrow class="-rotate-90 translate-x-32 -translate-y-1 text-teal-700" /></a>}
+  </nav>
+</Treebank>
