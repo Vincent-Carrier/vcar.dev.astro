@@ -4,12 +4,12 @@ import Base from '@/layouts/Base.astro';
 import works from './_nav';
 ---
 
-<Base title="Blog" description="Vincent's thoughts and vagaries">
-  <main class="mt-16 max-w-xl mx-auto">
+<Base title="Reader" description="A reading environment for Ancient Greek">
+  <main class="mt-16 max-w-xl mx-auto px-4">
     <p class="text-teal-700 text-lg font-serif mb-16">
       This is a collection of syntax-highlighted Ancient Greek texts. You can
       hover a word to see its dependencies, and click on a word to see its
-      morphological analysis. The texts are from the Perseus Digital Library.
+      morphological analysis. The texts are taken from the Perseus Digital Library.
     </p>
     <ul class="flex flex-col gap-y-16 mb-32">
       {
@@ -19,17 +19,17 @@ import works from './_nav';
           return (
             <Box>
               <a href={`/read/${tb.slug}`}>
-                <article class="max-w-xl mx-auto py-6 px-12 text-center">
+                <article class="max-w-xl mx-auto py-6 md:px-12 text-center">
                   <header class="font-display text-2xl text-teal-800">
                     {tb.data.title}
                   </header>
-                  <p class="font-serif text-teal-700 text-lg">
+                  <p class="font-serif text-teal-700/80 text-lg mb-4 italic">
                     by {tb.data.author}
                   </p>
                   <ol class="flex flex-wrap justify-center mx-auto px-8 gap-x-2 font-serif">
                     {chunks.map((chunk) => (
                       <li>
-                        <a class="text-teal-700/80 hover:text-rose-700" href={`/read/${chunk.slug}`}>
+                        <a class="text-teal-700 hover:text-rose-700" href={`/read/${chunk.slug}`}>
                           {chunk.data.chunkId}
                         </a>
                       </li>

@@ -4,6 +4,7 @@
 
 html {
 	font-synthesis: none;
+	@apply text-sm sm:text-base;
 }
 
 

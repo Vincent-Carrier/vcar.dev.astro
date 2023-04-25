@@ -21,9 +21,7 @@ const posts = (await getCollection('blog')).sort(
                 <header class="font-display text-2xl text-teal-800">
                   {post.data.title}
                 </header>
-                <p class="font-serif text-teal-700 text-lg">
-                  {post.data.description}
-                </p>
+                <p class="font-serif text-teal-700 text-lg" set:html={post.data.description} />
               </article>
             </a>
           </Box>

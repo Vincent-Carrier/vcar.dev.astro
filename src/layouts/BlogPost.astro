@@ -1,8 +1,8 @@
 ---
-import '@/styles/post.css';
-import '@/styles/prism.css';
-import type { CollectionEntry } from 'astro:content';
-import Base from './Base.astro';
+import '@/styles/post.css'
+import '@/styles/prism.css'
+import type { CollectionEntry } from 'astro:content'
+import Base from './Base.astro'
 
 type Props = CollectionEntry<'blog'>['data']
 
@@ -13,8 +13,8 @@ const p = Astro.props
   <main>
     <main class="mt-8 mb-16 max-w-2xl mx-auto px-4">
       <article class="flex flex-col gap-y-4 post">
-				<slot />
-			</article>
+        <slot />
+      </article>
     </main>
   </main>
 </Base>

@@ -1,7 +1,10 @@
 .post {
-  & h1 { @apply text-3xl text-teal-800 mb-2 font-display; }
-  & h2 { @apply text-xl text-teal-800 mt-8 font-display; }
-  & p { @apply text-teal-800 font-serif text-lg leading-relaxed; }
+  & h1 { @apply text-3xl text-teal-800 font-display; }
+  & h2 { @apply text-2xl text-teal-800 mt-8 font-display; }
+  & p, li { @apply text-teal-700 font-serif text-lg leading-relaxed; }
+  & a { @apply hover:text-rose-700 hover:decoration-rose-700 underline underline-offset-2 decoration-teal-700/30; }
+  & ul { @apply list-disc pl-4 ml-4; }
+  & sup { @apply text-[0.625em]; }
   & :is(h2, p) code {
     @apply text-sm bg-teal-50/40 px-1 py-px rounded-md border border-teal-600/20;
   }

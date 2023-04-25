@@ -12,12 +12,12 @@ import { Image } from 'astro:assets'
     <Image
       src={greeks}
       alt="greek heroes"
-      class="relative max-w-4xl mx-auto h-96 object-cover transform max-sm:-translate-x-64 max-md:-translate-x-32"
+      class="relative max-w-4xl mx-auto h-96 object-cover transform max-md:-translate-x-32"
     />
     <article class="max-w-xl mx-auto mt-20 px-4 transform md:-translate-x-14">
       <h1 class="text-3xl text-teal-700 w-min whitespace-nowrap relative">
         I&apos;m Vincent
-        <div class="absolute w-28 -right-36 top-2">
+        <div class="max-sm:hidden absolute w-28 -right-36 top-2">
           <div class="relative w-28 h-4">
             <div
               aria-hidden
@@ -51,19 +51,20 @@ import { Image } from 'astro:assets'
         <a href="/projects" class="hover:text-rose-800"> make websites</a>
         &nbsp;for a living
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but in my free time I enjoy
+        <span class="hidden sm:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>but in my free time I enjoy
         <br />
         obsessing about typefaces no one sees
         <br />
-        &nbsp;&nbsp;&nbsp;decoding dead languages no one speaks
+        <span class="hidden sm:inline">&nbsp;&nbsp;&nbsp;</span>decoding dead languages no one speaks
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and arguing about old books no one reads
+        <span class="hidden sm:inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and arguing about old books no one reads
       </p>
     </article>
     <footer class="max-w-xl mx-auto mt-24 mb-16">
-      <p class="mb-8 text-center font-serif italic text-teal-700/60">
-		Ah Daedalus, the Greeks. I must teach you. You should read them in<br /> the original.
-		θάλαττα! θάλαττα! She is our great, sweet mother.
+      <p class="mb-20 text-center font-serif italic text-teal-700/60">
+		the snot green sea &nbsp;—&nbsp; the scrotum tightening sea &nbsp;—&nbsp; επί οίνοπα πόντον<br/>
+		ah daedalus, the greeks. i must teach you. you should read them in<br /> the original.
+		θάλαττα! θάλαττα! she is our great, sweet mother
       </p>
       <div class="mt-12 mb-6 w-36 mx-auto">
         <Swash />

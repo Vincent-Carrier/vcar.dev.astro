@@ -9,14 +9,12 @@ const p = Astro.props
 ---
 
 <Base {...p}>
-  <main>
-    <main class="mt-8 mb-16 max-w-2xl mx-auto px-4">
-      <article>
-        <slot name="header" />
-        <div class="flex flex-col gap-y-4 post">
-          <slot />
-        </div>
-      </article>
-    </main>
+  <main class="mt-8 mb-16 max-w-2xl mx-auto px-4">
+    <article>
+      <slot name="header" />
+      <div class="flex flex-col gap-y-4 post">
+        <slot />
+      </div>
+    </article>
   </main>
 </Base>
