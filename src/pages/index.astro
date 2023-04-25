@@ -10,7 +10,10 @@ import { Image } from 'astro:assets'
 <Base title="Vincent Carrier" description="Web Developer, Hellenophile">
   <main class="font-display overflow-x-clip">
     <Image
-      src={greeks}
+      src={greeks.src}
+	  width={greeks.width}
+	  height={greeks.height}
+	  quality="mid"
       alt="greek heroes"
       class="relative max-w-4xl mx-auto h-96 object-cover transform max-md:-translate-x-32"
     />
