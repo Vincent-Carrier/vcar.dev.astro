@@ -8,15 +8,19 @@ If you’re like me and you’re learning Ancient Greek, you’ve probably had a
 
 You read and re-read a big, chunky sentence from your textbook — maybe it’s one of those convoluted quotes from Herodotus (hi Athenaze, still love you). You try to look for the verbs, but it’s hard because you haven’t yet memorized the aorist nominative neuter plural participle, *you wicked child*. You see a word in ον but you’re not sure if that’s a 3<sup>rd</sup> person plural imperfect, an accusative masculine singular substantive or an nominative neuter singular participle. After learning about the 3<sup>rd</sup> declension, the faith you had in your own language skills has fallen off a cliff. It certainly doesn’t help that your textbook is in *freaking Italian*. A few minutes later, you give up.
 
-Fret no longer. Over the past month, I have been working on new kind of reading experience for AG. Today, I am happy to share it with you. I call it **Dactyl** ©. You can give it a try over [here](/read/herodotus/historiae/11).
+Fret no longer. Over the past month, I have been working on new kind of reading experience for AG. Today, I am happy to share it with you. I call it
+**Oxytone** ©. You can give it a try over
+[here](https://oxytone.xyz/).
 
 ## The science of syntax highlighting 
-First and foremost, Dactyl brings syntax highlighting to Ancient Greek. This is a well-established feature of coding environments, but was lacking from the AG community until now. For programmers, syntax highlighting makes the structure of the program much more obvious, which [drastically improves the speed of comprehension](https://ppig.org/files/2015-PPIG-26th-Sarkar1.pdf). Likewise, syntax highlighting for AG makes explicit the structure of each sentence. The verb and its arguments are all easily spotted. This is especially important when you’re attacking a language where word order is almost completely free — seamlessly switching from SOV to OVS, to SVO, and so on. Crucially, this is done in a non-intrusive way — you’re still reading Greek, not staring at an abstract grammar tree.
+First and foremost, Oxytone brings syntax highlighting to Ancient Greek. This is a well-established feature of coding environments, but was lacking from the AG community until now. For programmers, syntax highlighting makes the structure of the program much more obvious, which [drastically improves the speed of comprehension](https://ppig.org/files/2015-PPIG-26th-Sarkar1.pdf). Likewise, syntax highlighting for AG makes explicit the structure of each sentence. The verb and its arguments are all easily spotted. This is especially important when you’re attacking a language where word order is almost completely free — seamlessly switching from SOV to OVS, to SVO, and so on. Crucially, this is done in a non-intrusive way — you’re still reading Greek, not staring at an abstract grammar tree.
 
-According to the [input hypothesis](https://en.wikipedia.org/wiki/Input_hypothesis), language acquisition only happens at the subconscious level, through the ingestion of large amounts of *comprehensible* input. As such, Dactyl is designed to get out of your way and let you enjoy the Greek text by itself. 
+According to the [input hypothesis](https://en.wikipedia.org/wiki/Input_hypothesis), language acquisition only happens at the subconscious level, through the ingestion of large amounts of *comprehensible* input. As such, O
+xytoneis designed to get out of your way and let you enjoy the Greek text by itself.
 
-## How to use Dactyl effectively
-Only when you run against a wall — when you can no longer *comprehend* the input — does Dactyl step in. 
+## How to use Oxytone effectively
+Only when you run against a wall — when you can no longer *comprehend* the input — does O
+xytonestep in.
 
 First, you can hover on any word to see its *dependencies*. If that word is a noun, its dependencies will include any article and adjectives that belong to it. If it’s a verb, it will include all its arguments (subject, direct object and indirect object).
 
