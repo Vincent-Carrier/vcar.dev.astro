@@ -14,7 +14,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 ---
 
-<meta name="google-site-verification" content="48A5z2Xf3u_bStDrnog-FdAOMqVIfZkoMc7qruzqobE" />
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
@@ -46,3 +45,5 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<meta name="google-site-verification" content="48A5z2Xf3u_bStDrnog-FdAOMqVIfZkoMc7qruzqobE" />
