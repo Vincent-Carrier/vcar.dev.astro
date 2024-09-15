@@ -14,6 +14,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 ---
 
+<meta name="google-site-verification" content="48A5z2Xf3u_bStDrnog-FdAOMqVIfZkoMc7qruzqobE" />
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -22,7 +24,7 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
-	
+
 <!-- RSS Feed Discovery -->
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
 
